@@ -1,4 +1,4 @@
-
+//ptd
 #define led1 A5
 #define led2 A4
 #define led3 A3
@@ -50,10 +50,9 @@ void BatTatDen(int x,long long timed){
 }
 
 void RandomTest()
-{
-  for (int i=0;i<7; i++)
-  {
-    int tam=random(1,8);
+{ int tam=random(1,8);
+  for (int i=0;i<3;i++) tam=random(1,8);
+  for (int i=0;i<7; i++){
     while (danhdau[tam]) tam=random(1,8);
     test[i] = tam;
     danhdau[tam]=true;
@@ -68,8 +67,8 @@ void check(){
         for (int j=0;j<7;j++) {
           if (j!=test[i]-1 && digitalRead(button[j])==0) gameover();
         }
-      } delay(500); 
-    }
+      } BatTatDen(test[i],500);
+    } delay(500);
   }
 }
 
