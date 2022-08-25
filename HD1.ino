@@ -1,3 +1,4 @@
+
 #define led1 A5
 #define led2 A4
 #define led3 A3
@@ -67,7 +68,7 @@ void check(){
         for (int j=0;j<7;j++) {
           if (j!=test[i]-1 && digitalRead(button[j])==0) gameover();
         }
-      } delay(1000);
+      } delay(500); 
     }
   }
 }
