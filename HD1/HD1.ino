@@ -49,6 +49,41 @@ void BatTatDen(int x,long long timed){
   }
 }
 
+void Tat(int x,long long timed){
+  if (x==1) {
+    delay(timed);
+    digitalWrite(led1, LOW);
+  } else if (x==2){
+    delay(timed);
+    digitalWrite(led2, LOW);
+  } else if (x==3){
+    delay(timed);
+    digitalWrite(led3, LOW);
+  } else {
+    int Den=x-2;
+    delay(timed);
+    digitalWrite(Den, LOW);
+  }
+}
+
+
+void Bat(int x,long long timed){
+  if (x==1) {
+    digitalWrite(led1, HIGH);
+    delay(timed);
+  } else if (x==2){
+    digitalWrite(led2, HIGH);
+    delay(timed);
+  } else if (x==3){
+    digitalWrite(led3, HIGH);
+    delay(timed);
+  } else {
+    int Den=x-2;
+    digitalWrite(Den, HIGH);
+    delay(timed);
+  }
+}
+
 void RandomTest()
 { int tam=random(1,8);
   for (int i=0;i<3;i++) tam=random(1,8);
@@ -67,8 +102,9 @@ void check(){
         for (int j=0;j<7;j++) {
           if (j!=test[i]-1 && digitalRead(button[j])==0) gameover();
         }
-      } BatTatDen(test[i],500);
+      } Bat(test[i],500);
     } delay(500);
+    for (int i=0;i<=v;i++) Tat(test[i],500);
   }
 }
 
@@ -195,7 +231,6 @@ void win(){
 }
 
 void loop() {
-  
   memset(danhdau,false,sizeof(danhdau));
   memset(test,0,sizeof(test));
   RandomTest();

@@ -366,7 +366,24 @@ void doica(){
   delay(200);
 }
 
+void quocca(){
+  tone(A2, 349.228, 125);
+  delay(125);
+  tone(A2, 391.995, 250);
+  delay(250);
+  tone(A2, 349.228, 125);
+  delay(125);
+  tone(A2,466.164,375);
+  delay(375);
+  tone(A2,466.164,750);
+  delay(750);
+  tone(A2,523.251,250);
+  delay(250);
+  tone(A2,466.164,125);
+  delay(125);
+}
+
 void loop() {
-  doica();
+  superidol();
   delay(10000000);
 }
