@@ -27,36 +27,11 @@ void setup() {
   randomSeed(analogRead(10));
 }
 
-
-void BatTatDen(int x,long long timed){
-  if (x==1) {
-    digitalWrite(led1, HIGH);
-    delay(timed);
-    digitalWrite(led1, LOW);
-  } else if (x==2){
-    digitalWrite(led2, HIGH);
-    delay(timed);
-    digitalWrite(led2, LOW);
-  } else if (x==3){
-    digitalWrite(led3, HIGH);
-    delay(timed);
-    digitalWrite(led3, LOW);
-  } else {
-    int Den=x-2;
-    digitalWrite(Den, HIGH);
-    delay(timed);
-    digitalWrite(Den, LOW);
-  }
-}
-
-void Tat(int x,long long timed){
-  if (x==1) {
-    digitalWrite(led1, LOW);
-  } else if (x==2){
-    digitalWrite(led2, LOW);
-  } else if (x==3){
-    digitalWrite(led3, LOW);
-  } else {
+void Tat(int x){
+  if (x==1) digitalWrite(led1, LOW);
+  else if (x==2)digitalWrite(led2, LOW);
+  else if (x==3)digitalWrite(led3, LOW);
+  else {
     int Den=x-2;
     digitalWrite(Den, LOW);
   }
@@ -64,21 +39,21 @@ void Tat(int x,long long timed){
 
 
 void Bat(int x,long long timed){
-  if (x==1) {
-    digitalWrite(led1, HIGH);
-    delay(timed);
-  } else if (x==2){
-    digitalWrite(led2, HIGH);
-    delay(timed);
-  } else if (x==3){
-    digitalWrite(led3, HIGH);
-    delay(timed);
-  } else {
+  if (x==1) digitalWrite(led1, HIGH);
+  else if (x==2)digitalWrite(led2, HIGH);
+  else if (x==3)digitalWrite(led3, HIGH);
+  else {
     int Den=x-2;
     digitalWrite(Den, HIGH);
-    delay(timed);
-  }
+  } delay(timed);
 }
+
+
+void BatTatDen(int x,long long timed){
+  Bat(x,timed);
+  Tat(x);
+}
+
 
 void RandomTest()
 { int tam=random(1,8);
@@ -100,7 +75,7 @@ void check(){
         }
       } Bat(test[i],500);
     } delay(500);
-    for (int i=0;i<=v;i++) Tat(test[i],500);
+    for (int i=0;i<=v;i++) Tat(test[i]);
     delay(500);
   }
 }
@@ -108,7 +83,6 @@ void check(){
 void gameover() {
 
   for (int i = 0; i <= 100; i++) {
-
     delay(200);
     tone(A2, 988, 300); 
     delay( 1000 ); 
@@ -116,7 +90,6 @@ void gameover() {
     tone(A2, 988, 300); 
     delay( 1000 ); 
     noTone(A2);
-
   }
   delay(2000);
 }
