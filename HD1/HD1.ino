@@ -7,7 +7,6 @@
 #define led6 4
 #define led7 5
 
-
 int const button[] = {6, 7, 8, 9, 10, 11, 12};
 bool danhdau[8]={false};
 int test[8];
@@ -31,29 +30,21 @@ void Tat(int x){
   if (x==1) digitalWrite(led1, LOW);
   else if (x==2)digitalWrite(led2, LOW);
   else if (x==3)digitalWrite(led3, LOW);
-  else {
-    int Den=x-2;
-    digitalWrite(Den, LOW);
-  }
+  else digitalWrite(x-2, LOW);
 }
-
 
 void Bat(int x,long long timed){
   if (x==1) digitalWrite(led1, HIGH);
   else if (x==2)digitalWrite(led2, HIGH);
   else if (x==3)digitalWrite(led3, HIGH);
-  else {
-    int Den=x-2;
-    digitalWrite(Den, HIGH);
-  } delay(timed);
+  else digitalWrite(x-2, HIGH);
+  delay(timed);
 }
-
 
 void BatTatDen(int x,long long timed){
   Bat(x,timed);
   Tat(x);
 }
-
 
 void RandomTest()
 { int tam=random(1,8);
@@ -90,8 +81,7 @@ void gameover() {
     tone(A2, 988, 300); 
     delay( 1000 ); 
     noTone(A2);
-  }
-  delay(2000);
+  } delay(2000);
 }
 
 void win(){
