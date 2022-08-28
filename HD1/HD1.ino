@@ -140,8 +140,10 @@ void BatTatDen(int x,long long timed){
 }
 
 void RandomTest()
-{ int tam=random(1,1000) % 7 + 1;
-  for (int i=0;i<3;i++) tam=random(1,1000) % 7 + 1;
+{ memset(danhdau,false,sizeof(danhdau));
+  memset(test,0,sizeof(test));
+  int tam=random(1,1000) % 7 + 1;
+  for (int i=0;i<13;i++) tam=random(1,1000) % 7 + 1;
   for (int i=0;i<7; i++){
     while (danhdau[tam]) tam=random(1,1000) % 7 + 1;
     test[i] = tam;
@@ -360,8 +362,6 @@ void superidol(){
 
 
 void loop() {
-  memset(danhdau,false,sizeof(danhdau));
-  memset(test,0,sizeof(test));
   RandomTest();
   check();
   superidol();
