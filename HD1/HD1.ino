@@ -8,7 +8,7 @@
 #define led7 5
 
 int const button[] = {6, 7, 8, 9, 10, 11, 12};
-bool danhdau[8]={false};
+bool danhdau[8];
 int test[8];
 long long vong3[100];
 
@@ -136,8 +136,10 @@ void gameover() {
 void loop() {
   RandomTest(7);
   checkvong1(4);
+  delay(2000);
   RandomTest(7);
   checkvong2(7);
+  delay(2000);
   RandomTest(7);
   checkvong3(7);
   delay(10000000);
