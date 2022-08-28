@@ -116,7 +116,7 @@ void setup() {
   for (int i=0;i<7;i++){
     pinMode(button[i], INPUT_PULLUP);  
   } Serial.begin(9600);
-  randomSeed(analogRead(10));
+  randomSeed(analogRead(5));
 }
 
 void Tat(int x){
@@ -140,10 +140,10 @@ void BatTatDen(int x,long long timed){
 }
 
 void RandomTest()
-{ int tam=random(1,8);
-  for (int i=0;i<3;i++) tam=random(1,8);
+{ int tam=random(1,1000) % 7 + 1;
+  for (int i=0;i<3;i++) tam=random(1,1000) % 7 + 1;
   for (int i=0;i<7; i++){
-    while (danhdau[tam]) tam=random(1,8);
+    while (danhdau[tam]) tam=random(1,1000) % 7 + 1;
     test[i] = tam;
     danhdau[tam]=true;
   }
