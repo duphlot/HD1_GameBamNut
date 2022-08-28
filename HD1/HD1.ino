@@ -77,14 +77,14 @@ void checkvong1(int n){
 void checkvong2(int n){
   for (int v=0;v<n;v+=2){
     Bat(test[v]); Bat(test[v+1]);
-    delay(500);
+    delay(1000);
     Tat(test[v]); Tat(test[v+1]);
     for (int i=0;i<=v;i+=2){
       while (digitalRead(button[test[i]-1]) == 1 && digitalRead(button[test[i+1]-1]) == 1){
         for (int j=0;j<n;j++) {
           if (j!=test[i]-1 && j!=test[i+1]-1 && digitalRead(button[j])==0) gameover();
         }
-      } Bat(test[i]);  Bat(test[i+1]);
+      } Bat(test[i]);  Bat(test[i+1]);delay(500);
     } delay(500);
     for (int i=0;i<=v;i+=2) Tat(test[i]),Tat(test[i+1]);
     delay(500);
@@ -97,20 +97,20 @@ void checkvong3(int n){
     int temp=0,i=0;
     tam=random(1,2); Bat(test[v]);
     if (tam==2) Bat(test[v+1]); 
-    delay(500); Tat(test[v]); Tat(test[v+1]);
+    delay(1000); Tat(test[v]); Tat(test[v+1]);
     while (i<=v){
       if (vong3[temp]==1){
         while (digitalRead(button[test[i]-1]) == 1){
           for (int j=0;j<n;j++) {
             if (j!=test[i]-1 && digitalRead(button[j])==0) gameover();
           }
-        }  Bat(test[i]);
+        }  Bat(test[i]); delay(500);
       } else {
         while (digitalRead(button[test[i]-1]) == 1 && digitalRead(button[test[i+1]-1]) == 1){
           for (int j=0;j<n;j++) {
             if (j!=test[i]-1 && j!=test[i+1]-1 && digitalRead(button[j])==0) gameover();
           }
-        } Bat(test[i]);  Bat(test[i+1]);
+        } Bat(test[i]);  Bat(test[i+1]); delay(500);
       }i+=vong3[temp]; temp++;
     } delay(500);
     for (int i=0;i<=n;i++) Tat(test[i]);
