@@ -140,8 +140,8 @@ void BatTatDen(int x,long long timed){
 }
 
 void RandomTest()
-{ memset(danhdau,false,sizeof(danhdau));
-  memset(test,0,sizeof(test));
+{ 
+  for (int i=1;i<=7;i++) danhdau[i]=false,test[i-1]=0;
   int tam=random(1,1000) % 7 + 1;
   for (int i=0;i<13;i++) tam=random(1,1000) % 7 + 1;
   for (int i=0;i<7; i++){
