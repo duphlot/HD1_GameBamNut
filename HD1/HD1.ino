@@ -116,7 +116,7 @@ void setup() {
   for (int i=0;i<7;i++){
     pinMode(button[i], INPUT_PULLUP);  
   } Serial.begin(9600);
-  randomSeed(analogRead(5));
+  randomSeed(analogRead(0));
 }
 
 void Tat(int x){
@@ -126,44 +126,61 @@ void Tat(int x){
   else digitalWrite(x-2, LOW);
 }
 
-void Bat(int x,long long timed){
+void Bat(int x){
   if (x==1) digitalWrite(led1, HIGH);
   else if (x==2)digitalWrite(led2, HIGH);
   else if (x==3)digitalWrite(led3, HIGH);
   else digitalWrite(x-2, HIGH);
-  delay(timed);
 }
 
 void BatTatDen(int x,long long timed){
-  Bat(x,timed);
+  Bat(x);
+  delay(timed);
   Tat(x);
 }
 
-void RandomTest()
+void RandomTest(int n)
 { 
-  for (int i=1;i<=7;i++) danhdau[i]=false,test[i-1]=0;
-  int tam=random(1,1000) % 7 + 1;
-  for (int i=0;i<13;i++) tam=random(1,1000) % 7 + 1;
-  for (int i=0;i<7; i++){
-    while (danhdau[tam]) tam=random(1,1000) % 7 + 1;
+  for (int i=1;i<=n;i++) danhdau[i]=false,test[i-1]=0;
+  int tam=random(1,1000) % n + 1;
+  for (int i=0;i<13;i++) tam=random(1,1000) % n + 1;
+  for (int i=0;i<n; i++){
+    while (danhdau[tam]) tam=random(1,1000) % n + 1;
     test[i] = tam;
     danhdau[tam]=true;
   }
 }
 
-void check(){
-  for (int v=0;v<7;v++){
+void checkvong1(int n){
+  for (int v=0;v<n;v++){
     BatTatDen(test[v],1000);
     for (int i=0;i<=v;i++){
       while (digitalRead(button[test[i]-1]) == 1){
-        for (int j=0;j<7;j++) {
+        for (int j=0;j<n;j++) {
           if (j!=test[i]-1 && digitalRead(button[j])==0) gameover();
         }
-      } Bat(test[i],500);
+      } Bat(test[i]); delay(500);
     } delay(500);
     for (int i=0;i<=v;i++) Tat(test[i]);
     delay(500);
   }
+}
+
+void checkvong2(int n){
+  for (int v=0;v<n;v+=2){
+    Bat(test[v]); Bat(test[v+1]);
+    delay(500);
+    Tat(test[v]); Tat(test[v+1]);
+    for (int i=0;i<=v;i+=2){
+      while (digitalRead(button[test[i]-1]) == 1 && digitalRead(button[test[i+1]-1]) == 1){
+        for (int j=0;j<n;j++) {
+          if (j!=test[i]-1 && j!=test[i+1]-1 && digitalRead(button[j])==0) gameover();
+        }
+      } Bat(test[i]);  Bat(test[i+1]);
+    } delay(500);
+    for (int i=0;i<=v;i+=2) Tat(test[i]),Tat(test[i+1]);
+    delay(500);
+  }  
 }
 
 void gameover() {
@@ -179,191 +196,11 @@ void gameover() {
   } delay(2000);
 }
 
-void win(){
-  tone(A2, 261.63, 200);
-    delay(500);
-    noTone(A2);
-    tone(A2, 261.63, 200);
-    delay(500);
-    noTone(A2);
-    
-    tone(A2, 392, 200);
-    delay(500);
-    noTone(A2);
-    tone(A2, 392, 200);
-    delay(500);
-    noTone(A2);
-
-    tone(A2, 440, 200);
-    delay(500);
-    noTone(A2);
-    tone(A2, 440, 200);
-    delay(500);
-    noTone(A2);
-
-    tone(A2, 392, 200);
-    delay(750);
-    noTone(A2);
-
-    tone(A2, 349, 200);
-    delay(500);
-    noTone(A2);
-    tone(A2, 349, 200);
-    delay(500);
-    noTone(A2);
-
-    tone(A2, 329, 200);
-    delay(500);
-    noTone(A2);
-    tone(A2, 329, 200);
-    delay(500);
-    noTone(A2);
-
-    tone(A2, 293, 200);
-    delay(500);
-    noTone(A2);
-    tone(A2, 293, 200);
-    delay(500);
-    noTone(A2);
-
-    tone(A2, 261, 200);
-    delay(750);
-    noTone(A2);
-
-    tone(A2, 392, 200);
-    delay(500);
-    noTone(A2);
-    tone(A2, 392, 200);
-    delay(500);
-    noTone(A2);
-
-    tone(A2, 349, 200);
-    delay(500);
-    noTone(A2);
-    tone(A2, 349, 200);
-    delay(500);
-    noTone(A2);
-
-    tone(A2, 329, 200);
-    delay(500);
-    noTone(A2);
-    tone(A2, 329, 200);
-    delay(500);
-    noTone(A2);
-
-    tone(A2, 293, 200);
-    delay(750);
-    noTone(A2);
-
-
-
-    tone(A2, 392, 200);
-    delay(500);
-    noTone(A2);
-    tone(A2, 392, 200);
-    delay(500);
-    noTone(A2);
-
-    tone(A2, 349, 200);
-    delay(500);
-    noTone(A2);
-    tone(A2, 349, 200);
-    delay(500);
-    noTone(A2);
-
-    tone(A2, 329, 200);
-    delay(500);
-    noTone(A2);
-    tone(A2, 329, 200);
-    delay(500);
-    noTone(A2);
-
-    tone(A2, 293, 200);
-    delay(750);
-    noTone(A2);
-    
-    delay(500);
-}
-
-void superidol(){
-  tone(A2, NOTE_D6, 200);
-  delay(200);
-  tone(A2, NOTE_D6, 200);
-  delay(200);
-  tone(A2, NOTE_DS6, 200);
-  delay(200);
-  tone(A2, NOTE_D6, 200);
-  delay(200);
-  tone(A2, NOTE_C6, 200);
-  delay(200);
-  tone(A2, NOTE_D6, 200);
-  delay(200);
-  tone(A2, NOTE_G5, 400);
-  delay(400);
-  tone(A2, NOTE_C6, 200);
-  delay(200);
-  tone(A2, NOTE_AS5, 200);
-  delay(200);
-  tone(A2, NOTE_G5, 400);
-  delay(400);
-  tone(A2, NOTE_AS5, 400);
-  delay(400);
-  tone(A2, NOTE_C6, 400);
-  delay(400);
-  tone(A2, NOTE_C6, 200);
-  delay(200);
-  tone(A2, NOTE_C6, 200);
-  delay(200);
-  tone(A2, NOTE_D6, 200);
-  delay(200);
-  tone(A2, NOTE_C6, 200);
-  delay(200);
-  tone(A2, NOTE_AS5, 200);
-  delay(200);
-  tone(A2, NOTE_C6, 200);
-  delay(200);
-  tone(A2, NOTE_D6, 400);
-  delay(400);
-  tone(A2, NOTE_AS5, 200);
-  delay(200);
-  tone(A2, NOTE_G5, 200);
-  delay(200);
-  tone(A2, NOTE_G5, 200);
-  delay(200);
-  tone(A2, NOTE_AS5, 200);
-  delay(200);
-  tone(A2, NOTE_G5, 200);
-  delay(200);
-  tone(A2, NOTE_AS5, 200);
-  delay(200);
-  tone(A2, NOTE_G5, 400);
-  delay(400);
-  tone(A2, NOTE_D6, 200);
-  delay(200);
-  tone(A2, NOTE_D6, 200);
-  delay(200);
-  tone(A2, NOTE_DS6, 200);
-  delay(200);
-  tone(A2, NOTE_D6, 200);
-  delay(200);
-  tone(A2, NOTE_C6, 200);
-  delay(200);
-  tone(A2, NOTE_AS5, 200);
-  delay(200);
-  tone(A2, NOTE_D6, 200);
-  delay(200);
-  tone(A2, NOTE_C6, 200);
-  delay(200);
-  tone(A2, NOTE_D6, 200);
-  delay(200);
-  tone(A2, NOTE_G5, 400);
-  delay(400);
-}
-
 
 void loop() {
-  RandomTest();
-  check();
-  superidol();
+  RandomTest(7);
+  checkvong1(4);
+  RandomTest(7);
+  checkvong2(7);
   delay(10000000);
 }
