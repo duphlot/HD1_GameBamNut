@@ -151,28 +151,15 @@ void RandomTest(int n)
   }
 }
 
-void checkvong1(int n){
-  for (int v=0;v<n;v++){
-    BatTatDen(test[v],1000);
-    for (int i=0;i<=v;i++){
-      while (digitalRead(button[test[i]-1]) == 1){
-        for (int j=0;j<n;j++) {
-          if (j!=test[i]-1 && digitalRead(button[j])==0) gameover();
-        }
-      } Bat(test[i]); delay(500);
-    } delay(500);
-    for (int i=0;i<=v;i++) Tat(test[i]);
-    delay(500);
-  }
+void ktdon(int i,int n){
+  while (digitalRead(button[test[i]-1]) == 1){
+    for (int j=0;j<n;j++) {
+      if (j!=test[i]-1 && digitalRead(button[j])==0) gameover();
+    }
+  } Bat(test[i]); delay(500);
 }
 
-void checkvong2(int n){
-  for (int v=0;v<n;v+=2){
-    Bat(test[v]); Bat(test[v+1]);
-    delay(1000);
-    Tat(test[v]); Tat(test[v+1]);
-    for (int i=0;i<=v;i+=2){
-      //1 la tat, 0 la bat
+void kttohop2(int i,int n){
       while (digitalRead(button[test[i]-1]) == 1 || digitalRead(button[test[i+1]-1]) == 1){
         for (int j=0;j<n;j++) {
           if (j!=test[i]-1 && j!=test[i+1]-1 && digitalRead(button[j])==0)gameover();
@@ -186,7 +173,23 @@ void checkvong2(int n){
           }
         } 
       } Bat(test[i]);  Bat(test[i+1]);delay(500);
-    } delay(500);
+}
+
+void checkvong1(int n){
+  for (int v=0;v<n;v++){
+    BatTatDen(test[v],1000);
+    for (int i=0;i<=v;i++) ktdon(i,n);
+    delay(500); for (int i=0;i<=v;i++) Tat(test[i]); delay(500);
+  }
+}
+
+void checkvong2(int n){
+  for (int v=0;v<n;v+=2){
+    Bat(test[v]); Bat(test[v+1]);
+    delay(1000);
+    Tat(test[v]); Tat(test[v+1]);
+    for (int i=0;i<=v;i+=2) kttohop2(i,n);
+    delay(500);
     for (int i=0;i<=v;i+=2) Tat(test[i]),Tat(test[i+1]);
     delay(500);
   }  
@@ -201,27 +204,9 @@ void checkvong3(int n){
     delay(1000); Tat(test[v]); Tat(test[v+1]);
     vong3[dem]=tam;
     while (i<=v){
-      if (vong3[temp]==1){
-        while (digitalRead(button[test[i]-1]) == 1){
-          for (int j=0;j<n;j++) {
-            if (j!=test[i]-1 && digitalRead(button[j])==0) gameover();
-          }
-        }  Bat(test[i]); delay(500);
-      } else {
-        while (digitalRead(button[test[i]-1]) == 1 || digitalRead(button[test[i+1]-1]) == 1){
-          for (int j=0;j<n;j++) {
-            if (j!=test[i]-1 && j!=test[i+1]-1 && digitalRead(button[j])==0)gameover();
-            if (digitalRead(button[test[i]-1]) == 1 && digitalRead(button[test[i+1]-1]) == 0) {
-              delay(100);
-              if (digitalRead(button[test[i]-1]) == 1) gameover();
-            }
-            if  (digitalRead(button[test[i]-1]) == 0 && digitalRead(button[test[i+1]-1]) == 1){
-              delay(100);
-              if (digitalRead(button[test[i+1]-1]) == 1) gameover();
-            }
-          } 
-        }Bat(test[i]);  Bat(test[i+1]);delay(500);
-      }i+=vong3[temp]; temp++;
+      if (vong3[temp]==1) ktdon(i,n);
+      else kttohop2(i,n);
+      i+=vong3[temp]; temp++;
     } delay(500);
     for (int i=0;i<=n;i++) Tat(test[i]);
     delay(500);
