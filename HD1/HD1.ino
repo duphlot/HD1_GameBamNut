@@ -152,6 +152,7 @@ void RandomTest(int n)
 }
 
 void ktdon(int i,int n){
+  //1 la tat, 0 la bat
   while (digitalRead(button[test[i]-1]) == 1){
     for (int j=0;j<n;j++) {
       if (j!=test[i]-1 && digitalRead(button[j])==0) gameover();
