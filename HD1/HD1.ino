@@ -102,6 +102,7 @@
 int const button[] = {6, 7, 8, 9, 10, 11, 12};
 bool danhdau[8];
 int test[8];
+int cnt = 0;
 long long vong3[100];
 
 void setup() {
@@ -117,6 +118,21 @@ void setup() {
     pinMode(button[i], INPUT_PULLUP);  
   } Serial.begin(9600);
   randomSeed(analogRead(0));
+}
+
+void KhoiTao()
+{
+  while(digitalRead(button[2]) != 0)
+  {
+    if (digitalRead(button[6]) == 0)
+    {
+      cnt++;
+      BatTatDen(7, 500);
+      tone(A2, NOTE_G5, 400);
+      delay(400);
+    }
+  } tone(A2, NOTE_D6, 200);
+  delay(200);
 }
 
 void Tat(int x){
@@ -143,7 +159,7 @@ void RandomTest(int n)
 { 
   for (int i=1;i<=n;i++) danhdau[i]=false,test[i-1]=0;
   int tam=random(1,1000) % n + 1;
-  for (int i=0;i<13;i++) tam=random(1,1000) % n + 1;
+  for (int i=0;i<cnt;i++) tam=random(1,1000) % n + 1;
   for (int i=0;i<n; i++){
     while (danhdau[tam]) tam=random(1,1000) % n + 1;
     test[i] = tam;
@@ -303,16 +319,28 @@ void superidol(){
   delay(400);
 }
 
+void BatTatCa()
+{
+  for(int i = 1; i <= 7; ++i)
+    Bat(i);
+  delay(1000);
+  for(int i = 1; i <= 7; ++i)
+    Tat(i);
+  delay(1000);
+}
+
 void loop() {
+  KhoiTao();
+  delay(2000);
+  
   RandomTest(7);
   checkvong1(4);
-  tone(A2, 988, 300); 
-  delay(1000);
+  BatTatCa();
+  
   RandomTest(7);
   checkvong2(6);
-  delay(2000);
-  tone(A2, 988, 300); 
-  delay(1000);
+  BatTatCa();
+  
   RandomTest(7);
   checkvong3(7);
   superidol();
