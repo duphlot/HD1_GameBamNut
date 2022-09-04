@@ -1,4 +1,5 @@
 // I would never fall in love again, until I found you
+#include <Arduino.h>
 //ptd
 #define led1 A5
 #define led2 A4
@@ -107,7 +108,6 @@ int cnt = 0;
 long long vong3[100];
 
 void setup() {
-  long long n=sizeof(button);
   pinMode(led1,OUTPUT);
   pinMode(led2,OUTPUT);
   pinMode(led3,OUTPUT);
@@ -121,19 +121,17 @@ void setup() {
   randomSeed(analogRead(0));
 }
 
-void KhoiTao()
-{
-  while(digitalRead(button[2]) != 0)
-  {
-    if (digitalRead(button[6]) == 0)
-    {
-      cnt++;
-      BatTatDen(7, 500);
-      tone(A2, NOTE_G5, 400);
-      delay(400);
-    }
-  } tone(A2, NOTE_D6, 200);
-  delay(200);
+void gameover() {
+
+  for (int i = 0; i <= 100; i++) {
+    delay(200);
+    tone(A2, 988, 300); 
+    delay( 1000 ); 
+    noTone(A2);
+    tone(A2, 988, 300); 
+    delay( 1000 ); 
+    noTone(A2);
+  } delay(2000);
 }
 
 void Tat(int x){
@@ -154,6 +152,21 @@ void BatTatDen(int x,long long timed){
   Bat(x);
   delay(timed);
   Tat(x);
+}
+
+void KhoiTao()
+{
+  while(digitalRead(button[2]) != 0)
+  {
+    if (digitalRead(button[6]) == 0)
+    {
+      cnt++;
+      BatTatDen(7, 500);
+      tone(A2, NOTE_G5, 400);
+      delay(400);
+    }
+  } tone(A2, NOTE_D6, 200);
+  delay(200);
 }
 
 void RandomTest(int n)
@@ -214,7 +227,7 @@ void checkvong2(int n){
 }
 
 void checkvong3(int n){
-  int tam=random(1,1002)  % 2 + 1,v=0,dem=0;
+  int v=0,dem=0;
   while (v<n){
     int temp=0,i=0; 
     int tam=random(1,1000) % 2 + 1; Bat(test[v]);
@@ -232,18 +245,6 @@ void checkvong3(int n){
   }
 }
 
-void gameover() {
-
-  for (int i = 0; i <= 100; i++) {
-    delay(200);
-    tone(A2, 988, 300); 
-    delay( 1000 ); 
-    noTone(A2);
-    tone(A2, 988, 300); 
-    delay( 1000 ); 
-    noTone(A2);
-  } delay(2000);
-}
 
 void superidol(){
   tone(A2, NOTE_D6, 200);
