@@ -158,12 +158,8 @@ void KhoiTao()
 {
   while(digitalRead(button[2]) != 0)
   {
-    if (digitalRead(button[6]) == 0)
-    {
+    if (digitalRead(button[6]) == 0){
       cnt++;
-      BatTatDen(7, 500);
-      tone(A2, NOTE_G5, 400);
-      delay(400);
     }
   } tone(A2, NOTE_D6, 200);
   delay(200);
@@ -209,9 +205,10 @@ void kttohop2(int i,int n){
 void checkvong1(int n){
   for (int v=0;v<n;v++){
     BatTatDen(test[v],1000);
-    for (int i=0;i<=v;i++) ktdon(i,n);
-    delay(500); for (int i=0;i<=v;i++) Tat(test[i]); delay(500);
   }
+  for (int i=0;i<n;i++) ktdon(i,n);
+  delay(500); for (int i=0;i<n;i++) Tat(test[i]); delay(500);
+
 }
 
 void checkvong2(int n){
@@ -219,11 +216,10 @@ void checkvong2(int n){
     Bat(test[v]); Bat(test[v+1]);
     delay(1000);
     Tat(test[v]); Tat(test[v+1]);
-    for (int i=0;i<=v;i+=2) kttohop2(i,n);
+  }  for (int i=0;i<n;i+=2) kttohop2(i,n);
     delay(500);
-    for (int i=0;i<=v;i+=2) Tat(test[i]),Tat(test[i+1]);
+    for (int i=0;i<n;i+=2) Tat(test[i]),Tat(test[i+1]);
     delay(500);
-  }  
 }
 
 void checkvong3(int n){
@@ -234,31 +230,32 @@ void checkvong3(int n){
     if (tam==2) Bat(test[v+1]); 
     delay(1000); Tat(test[v]); Tat(test[v+1]);
     vong3[dem]=tam;
-    while (i<=v){
-      if (vong3[temp]==1) ktdon(i,n);
-      else kttohop2(i,n);
-      i+=vong3[temp]; temp++;
-    } delay(500);
-    for (int i=0;i<=n;i++) Tat(test[i]);
-    delay(500);
     v+=tam;  dem++;
-  }
+  } int i=0,temp=0;
+  while (i<n){
+    if (vong3[temp]==1) ktdon(i,n);
+    else kttohop2(i,n);
+    i+=vong3[temp]; temp++;
+  } delay(500);
+  for (int i=0;i<=n;i++) Tat(test[i]);
+  delay(500);
+  
 }
 
 
 void superidol(){
   tone(A2, NOTE_D6, 200);
-  delay(200);
+  delay(100);
   tone(A2, NOTE_D6, 200);
-  delay(200);
+  delay(100);
   tone(A2, NOTE_DS6, 200);
-  delay(200);
+  delay(100);
   tone(A2, NOTE_D6, 200);
-  delay(200);
+  delay(150);
   tone(A2, NOTE_C6, 200);
-  delay(200);
+  delay(150);
   tone(A2, NOTE_D6, 200);
-  delay(200);
+  delay(100);
   tone(A2, NOTE_G5, 400);
   delay(400);
   tone(A2, NOTE_C6, 200);
@@ -320,7 +317,50 @@ void superidol(){
   tone(A2, NOTE_G5, 400);
   delay(400);
 }
-
+void conbuomvang(){
+    tone(A2,NOTE_C3,200);
+    delay(100);
+    tone(A2,NOTE_D3,200);
+    delay(100);
+    tone(A2,NOTE_E3,200);
+    delay(100);
+    tone(A2,NOTE_C3,200);
+    delay(200);
+    tone(A2,NOTE_C3,200);
+    delay(100);
+    tone(A2,NOTE_D3,200);
+    delay(100);
+    tone(A2,NOTE_E3,200);
+    delay(100);
+    tone(A2,NOTE_C3,200);
+    delay(200);    
+    tone(A2,NOTE_E3,200);
+    delay(100);
+    tone(A2,NOTE_F3,200);
+    delay(100);
+    tone(A2,NOTE_G3,200);
+    delay(150);
+    tone(A2,NOTE_E3,200);
+    delay(100);
+    tone(A2,NOTE_F3,200);
+    delay(100);
+    tone(A2,NOTE_G3,200);
+    delay(150);
+    tone(A2,NOTE_G3,200);
+    delay(100);
+    tone(A2,NOTE_A3,200);
+    delay(100); 
+    tone(A2,NOTE_G3,200);
+    delay(100);
+    tone(A2,NOTE_F3,200);
+    delay(100);
+    tone(A2,NOTE_E3,200);
+    delay(100); 
+    tone(A2,NOTE_C3,200);
+    delay(100); 
+    tone(A2,NOTE_G2,200);
+    delay(100);
+}
 void BatTatCa()
 {
   for(int i = 1; i <= 7; ++i)
@@ -330,6 +370,7 @@ void BatTatCa()
     Tat(i);
   delay(1000);
 }
+
 
 void loop() {
   KhoiTao();
