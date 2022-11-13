@@ -1,0 +1,405 @@
+[
+  {
+    "label": "01.Basics",
+    "children": [],
+    "sketches": [
+      {
+        "name": "AnalogReadSerial",
+        "relativePath": "01.Basics\\AnalogReadSerial"
+      },
+      {
+        "name": "BareMinimum",
+        "relativePath": "01.Basics\\BareMinimum"
+      },
+      {
+        "name": "Blink",
+        "relativePath": "01.Basics\\Blink"
+      },
+      {
+        "name": "DigitalReadSerial",
+        "relativePath": "01.Basics\\DigitalReadSerial"
+      },
+      {
+        "name": "Fade",
+        "relativePath": "01.Basics\\Fade"
+      },
+      {
+        "name": "ReadAnalogVoltage",
+        "relativePath": "01.Basics\\ReadAnalogVoltage"
+      }
+    ]
+  },
+  {
+    "label": "02.Digital",
+    "children": [],
+    "sketches": [
+      {
+        "name": "BlinkWithoutDelay",
+        "relativePath": "02.Digital\\BlinkWithoutDelay"
+      },
+      {
+        "name": "Button",
+        "relativePath": "02.Digital\\Button"
+      },
+      {
+        "name": "Debounce",
+        "relativePath": "02.Digital\\Debounce"
+      },
+      {
+        "name": "DigitalInputPullup",
+        "relativePath": "02.Digital\\DigitalInputPullup"
+      },
+      {
+        "name": "StateChangeDetection",
+        "relativePath": "02.Digital\\StateChangeDetection"
+      },
+      {
+        "name": "toneKeyboard",
+        "relativePath": "02.Digital\\toneKeyboard"
+      },
+      {
+        "name": "toneMelody",
+        "relativePath": "02.Digital\\toneMelody"
+      },
+      {
+        "name": "toneMultiple",
+        "relativePath": "02.Digital\\toneMultiple"
+      },
+      {
+        "name": "tonePitchFollower",
+        "relativePath": "02.Digital\\tonePitchFollower"
+      }
+    ]
+  },
+  {
+    "label": "03.Analog",
+    "children": [],
+    "sketches": [
+      {
+        "name": "AnalogInOutSerial",
+        "relativePath": "03.Analog\\AnalogInOutSerial"
+      },
+      {
+        "name": "AnalogInput",
+        "relativePath": "03.Analog\\AnalogInput"
+      },
+      {
+        "name": "AnalogWriteMega",
+        "relativePath": "03.Analog\\AnalogWriteMega"
+      },
+      {
+        "name": "Calibration",
+        "relativePath": "03.Analog\\Calibration"
+      },
+      {
+        "name": "Fading",
+        "relativePath": "03.Analog\\Fading"
+      },
+      {
+        "name": "Smoothing",
+        "relativePath": "03.Analog\\Smoothing"
+      }
+    ]
+  },
+  {
+    "label": "04.Communication",
+    "children": [],
+    "sketches": [
+      {
+        "name": "ASCIITable",
+        "relativePath": "04.Communication\\ASCIITable"
+      },
+      {
+        "name": "Dimmer",
+        "relativePath": "04.Communication\\Dimmer"
+      },
+      {
+        "name": "Graph",
+        "relativePath": "04.Communication\\Graph"
+      },
+      {
+        "name": "Midi",
+        "relativePath": "04.Communication\\Midi"
+      },
+      {
+        "name": "MultiSerial",
+        "relativePath": "04.Communication\\MultiSerial"
+      },
+      {
+        "name": "PhysicalPixel",
+        "relativePath": "04.Communication\\PhysicalPixel"
+      },
+      {
+        "name": "ReadASCIIString",
+        "relativePath": "04.Communication\\ReadASCIIString"
+      },
+      {
+        "name": "SerialCallResponse",
+        "relativePath": "04.Communication\\SerialCallResponse"
+      },
+      {
+        "name": "SerialCallResponseASCII",
+        "relativePath": "04.Communication\\SerialCallResponseASCII"
+      },
+      {
+        "name": "SerialEvent",
+        "relativePath": "04.Communication\\SerialEvent"
+      },
+      {
+        "name": "SerialPassthrough",
+        "relativePath": "04.Communication\\SerialPassthrough"
+      },
+      {
+        "name": "VirtualColorMixer",
+        "relativePath": "04.Communication\\VirtualColorMixer"
+      }
+    ]
+  },
+  {
+    "label": "05.Control",
+    "children": [],
+    "sketches": [
+      {
+        "name": "Arrays",
+        "relativePath": "05.Control\\Arrays"
+      },
+      {
+        "name": "ForLoopIteration",
+        "relativePath": "05.Control\\ForLoopIteration"
+      },
+      {
+        "name": "IfStatementConditional",
+        "relativePath": "05.Control\\IfStatementConditional"
+      },
+      {
+        "name": "switchCase",
+        "relativePath": "05.Control\\switchCase"
+      },
+      {
+        "name": "switchCase2",
+        "relativePath": "05.Control\\switchCase2"
+      },
+      {
+        "name": "WhileStatementConditional",
+        "relativePath": "05.Control\\WhileStatementConditional"
+      }
+    ]
+  },
+  {
+    "label": "06.Sensors",
+    "children": [],
+    "sketches": [
+      {
+        "name": "ADXL3xx",
+        "relativePath": "06.Sensors\\ADXL3xx"
+      },
+      {
+        "name": "Knock",
+        "relativePath": "06.Sensors\\Knock"
+      },
+      {
+        "name": "Memsic2125",
+        "relativePath": "06.Sensors\\Memsic2125"
+      },
+      {
+        "name": "Ping",
+        "relativePath": "06.Sensors\\Ping"
+      }
+    ]
+  },
+  {
+    "label": "07.Display",
+    "children": [],
+    "sketches": [
+      {
+        "name": "barGraph",
+        "relativePath": "07.Display\\barGraph"
+      },
+      {
+        "name": "RowColumnScanning",
+        "relativePath": "07.Display\\RowColumnScanning"
+      }
+    ]
+  },
+  {
+    "label": "08.Strings",
+    "children": [],
+    "sketches": [
+      {
+        "name": "CharacterAnalysis",
+        "relativePath": "08.Strings\\CharacterAnalysis"
+      },
+      {
+        "name": "StringAdditionOperator",
+        "relativePath": "08.Strings\\StringAdditionOperator"
+      },
+      {
+        "name": "StringAppendOperator",
+        "relativePath": "08.Strings\\StringAppendOperator"
+      },
+      {
+        "name": "StringCaseChanges",
+        "relativePath": "08.Strings\\StringCaseChanges"
+      },
+      {
+        "name": "StringCharacters",
+        "relativePath": "08.Strings\\StringCharacters"
+      },
+      {
+        "name": "StringComparisonOperators",
+        "relativePath": "08.Strings\\StringComparisonOperators"
+      },
+      {
+        "name": "StringConstructors",
+        "relativePath": "08.Strings\\StringConstructors"
+      },
+      {
+        "name": "StringIndexOf",
+        "relativePath": "08.Strings\\StringIndexOf"
+      },
+      {
+        "name": "StringLength",
+        "relativePath": "08.Strings\\StringLength"
+      },
+      {
+        "name": "StringLengthTrim",
+        "relativePath": "08.Strings\\StringLengthTrim"
+      },
+      {
+        "name": "StringReplace",
+        "relativePath": "08.Strings\\StringReplace"
+      },
+      {
+        "name": "StringStartsWithEndsWith",
+        "relativePath": "08.Strings\\StringStartsWithEndsWith"
+      },
+      {
+        "name": "StringSubstring",
+        "relativePath": "08.Strings\\StringSubstring"
+      },
+      {
+        "name": "StringToInt",
+        "relativePath": "08.Strings\\StringToInt"
+      }
+    ]
+  },
+  {
+    "label": "09.USB",
+    "children": [
+      {
+        "label": "Keyboard",
+        "children": [],
+        "sketches": [
+          {
+            "name": "KeyboardLogout",
+            "relativePath": "09.USB\\Keyboard\\KeyboardLogout"
+          },
+          {
+            "name": "KeyboardMessage",
+            "relativePath": "09.USB\\Keyboard\\KeyboardMessage"
+          },
+          {
+            "name": "KeyboardReprogram",
+            "relativePath": "09.USB\\Keyboard\\KeyboardReprogram"
+          },
+          {
+            "name": "KeyboardSerial",
+            "relativePath": "09.USB\\Keyboard\\KeyboardSerial"
+          }
+        ]
+      },
+      {
+        "label": "Mouse",
+        "children": [],
+        "sketches": [
+          {
+            "name": "ButtonMouseControl",
+            "relativePath": "09.USB\\Mouse\\ButtonMouseControl"
+          },
+          {
+            "name": "JoystickMouseControl",
+            "relativePath": "09.USB\\Mouse\\JoystickMouseControl"
+          }
+        ]
+      }
+    ],
+    "sketches": [
+      {
+        "name": "KeyboardAndMouseControl",
+        "relativePath": "09.USB\\KeyboardAndMouseControl"
+      }
+    ]
+  },
+  {
+    "label": "10.StarterKit_BasicKit",
+    "children": [],
+    "sketches": [
+      {
+        "name": "p02_SpaceshipInterface",
+        "relativePath": "10.StarterKit_BasicKit\\p02_SpaceshipInterface"
+      },
+      {
+        "name": "p03_LoveOMeter",
+        "relativePath": "10.StarterKit_BasicKit\\p03_LoveOMeter"
+      },
+      {
+        "name": "p04_ColorMixingLamp",
+        "relativePath": "10.StarterKit_BasicKit\\p04_ColorMixingLamp"
+      },
+      {
+        "name": "p05_ServoMoodIndicator",
+        "relativePath": "10.StarterKit_BasicKit\\p05_ServoMoodIndicator"
+      },
+      {
+        "name": "p06_LightTheremin",
+        "relativePath": "10.StarterKit_BasicKit\\p06_LightTheremin"
+      },
+      {
+        "name": "p07_Keyboard",
+        "relativePath": "10.StarterKit_BasicKit\\p07_Keyboard"
+      },
+      {
+        "name": "p08_DigitalHourglass",
+        "relativePath": "10.StarterKit_BasicKit\\p08_DigitalHourglass"
+      },
+      {
+        "name": "p09_MotorizedPinwheel",
+        "relativePath": "10.StarterKit_BasicKit\\p09_MotorizedPinwheel"
+      },
+      {
+        "name": "p10_Zoetrope",
+        "relativePath": "10.StarterKit_BasicKit\\p10_Zoetrope"
+      },
+      {
+        "name": "p11_CrystalBall",
+        "relativePath": "10.StarterKit_BasicKit\\p11_CrystalBall"
+      },
+      {
+        "name": "p12_KnockLock",
+        "relativePath": "10.StarterKit_BasicKit\\p12_KnockLock"
+      },
+      {
+        "name": "p13_TouchSensorLamp",
+        "relativePath": "10.StarterKit_BasicKit\\p13_TouchSensorLamp"
+      },
+      {
+        "name": "p14_TweakTheArduinoLogo",
+        "relativePath": "10.StarterKit_BasicKit\\p14_TweakTheArduinoLogo"
+      },
+      {
+        "name": "p15_HackingButtons",
+        "relativePath": "10.StarterKit_BasicKit\\p15_HackingButtons"
+      }
+    ]
+  },
+  {
+    "label": "11.ArduinoISP",
+    "children": [],
+    "sketches": [
+      {
+        "name": "ArduinoISP",
+        "relativePath": "11.ArduinoISP\\ArduinoISP"
+      }
+    ]
+  }
+]

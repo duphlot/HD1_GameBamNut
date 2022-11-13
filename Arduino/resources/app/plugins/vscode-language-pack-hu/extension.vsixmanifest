@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="vscode-language-pack-hu" Version="1.48.3" Publisher="MS-CEINTL"/>
+    <DisplayName>Hungarian Language Pack for Visual Studio Code</DisplayName>
+    <Description xml:space="preserve">Language pack extension for Hungarian</Description>
+    <Tags>lp-hu,__lp_vscode,__lp-hu_vscode,__lp_vscode.bat,__lp-hu_vscode.bat,__lp_vscode.clojure,__lp-hu_vscode.clojure,__lp_vscode.coffeescript,__lp-hu_vscode.coffeescript,__lp_vscode.configuration-editing,__lp-hu_vscode.configuration-editing,__lp_vscode.cpp,__lp-hu_vscode.cpp,__lp_vscode.csharp,__lp-hu_vscode.csharp,__lp_vscode.css-language-features,__lp-hu_vscode.css-language-features,__lp_vscode.css,__lp-hu_vscode.css,__lp_vscode.debug-auto-launch,__lp-hu_vscode.debug-auto-launch,__lp_vscode.debug-server-ready,__lp-hu_vscode.debug-server-ready,__lp_vscode.docker,__lp-hu_vscode.docker,__lp_vscode.emmet,__lp-hu_vscode.emmet,__lp_vscode.extension-editing,__lp-hu_vscode.extension-editing,__lp_vscode.fsharp,__lp-hu_vscode.fsharp,__lp_vscode.git-ui,__lp-hu_vscode.git-ui,__lp_vscode.git,__lp-hu_vscode.git,__lp_vscode.github-authentication,__lp-hu_vscode.github-authentication,__lp_vscode.go,__lp-hu_vscode.go,__lp_vscode.groovy,__lp-hu_vscode.groovy,__lp_vscode.grunt,__lp-hu_vscode.grunt,__lp_vscode.gulp,__lp-hu_vscode.gulp,__lp_vscode.handlebars,__lp-hu_vscode.handlebars,__lp_vscode.hlsl,__lp-hu_vscode.hlsl,__lp_vscode.html-language-features,__lp-hu_vscode.html-language-features,__lp_vscode.html,__lp-hu_vscode.html,__lp_vscode.image-preview,__lp-hu_vscode.image-preview,__lp_vscode.ini,__lp-hu_vscode.ini,__lp_vscode.jake,__lp-hu_vscode.jake,__lp_vscode.java,__lp-hu_vscode.java,__lp_vscode.javascript,__lp-hu_vscode.javascript,__lp_vscode.json-language-features,__lp-hu_vscode.json-language-features,__lp_vscode.json,__lp-hu_vscode.json,__lp_vscode.less,__lp-hu_vscode.less,__lp_vscode.log,__lp-hu_vscode.log,__lp_vscode.lua,__lp-hu_vscode.lua,__lp_vscode.make,__lp-hu_vscode.make,__lp_vscode.markdown-basics,__lp-hu_vscode.markdown-basics,__lp_vscode.markdown-language-features,__lp-hu_vscode.markdown-language-features,__lp_vscode.merge-conflict,__lp-hu_vscode.merge-conflict,__lp_vscode.ms-vscode.js-debug-nightly,__lp-hu_vscode.ms-vscode.js-debug-nightly,__lp_vscode.ms-vscode.node-debug,__lp-hu_vscode.ms-vscode.node-debug,__lp_vscode.ms-vscode.node-debug2,__lp-hu_vscode.ms-vscode.node-debug2,__lp_vscode.npm,__lp-hu_vscode.npm,__lp_vscode.objective-c,__lp-hu_vscode.objective-c,__lp_vscode.perl,__lp-hu_vscode.perl,__lp_vscode.php-language-features,__lp-hu_vscode.php-language-features,__lp_vscode.php,__lp-hu_vscode.php,__lp_vscode.powershell,__lp-hu_vscode.powershell,__lp_vscode.pug,__lp-hu_vscode.pug,__lp_vscode.python,__lp-hu_vscode.python,__lp_vscode.r,__lp-hu_vscode.r,__lp_vscode.razor,__lp-hu_vscode.razor,__lp_vscode.ruby,__lp-hu_vscode.ruby,__lp_vscode.rust,__lp-hu_vscode.rust,__lp_vscode.scss,__lp-hu_vscode.scss,__lp_vscode.search-result,__lp-hu_vscode.search-result,__lp_vscode.shaderlab,__lp-hu_vscode.shaderlab,__lp_vscode.shellscript,__lp-hu_vscode.shellscript,__lp_vscode.sql,__lp-hu_vscode.sql,__lp_vscode.swift,__lp-hu_vscode.swift,__lp_vscode.theme-abyss,__lp-hu_vscode.theme-abyss,__lp_vscode.theme-defaults,__lp-hu_vscode.theme-defaults,__lp_vscode.theme-kimbie-dark,__lp-hu_vscode.theme-kimbie-dark,__lp_vscode.theme-monokai-dimmed,__lp-hu_vscode.theme-monokai-dimmed,__lp_vscode.theme-monokai,__lp-hu_vscode.theme-monokai,__lp_vscode.theme-quietlight,__lp-hu_vscode.theme-quietlight,__lp_vscode.theme-red,__lp-hu_vscode.theme-red,__lp_vscode.theme-seti,__lp-hu_vscode.theme-seti,__lp_vscode.theme-solarized-dark,__lp-hu_vscode.theme-solarized-dark,__lp_vscode.theme-solarized-light,__lp-hu_vscode.theme-solarized-light,__lp_vscode.theme-tomorrow-night-blue,__lp-hu_vscode.theme-tomorrow-night-blue,__lp_vscode.typescript-basics,__lp-hu_vscode.typescript-basics,__lp_vscode.typescript-language-features,__lp-hu_vscode.typescript-language-features,__lp_vscode.vb,__lp-hu_vscode.vb,__lp_vscode.vscode-account,__lp-hu_vscode.vscode-account,__lp_vscode.vscode-chrome-debug-core,__lp-hu_vscode.vscode-chrome-debug-core,__lp_ms-vscode.node-debug,__lp-hu_ms-vscode.node-debug,__lp_ms-vscode.node-debug2,__lp-hu_ms-vscode.node-debug2,__lp_vscode.xml,__lp-hu_vscode.xml,__lp_vscode.yaml,__lp-hu_vscode.yaml</Tags>
+    <Categories>Language Packs</Categories>
+    <GalleryFlags>Public</GalleryFlags>
+    <Badges></Badges>
+    <Properties>
+      <Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.48.0" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="" />
+      <Property Id="Microsoft.VisualStudio.Code.LocalizedLanguages" Value="magyar" />
+      
+        <Property Id="Microsoft.VisualStudio.Services.Links.Source" Value="https://github.com/Microsoft/vscode-loc" />
+        <Property Id="Microsoft.VisualStudio.Services.Links.Getstarted" Value="https://github.com/Microsoft/vscode-loc" />
+        
+          <Property Id="Microsoft.VisualStudio.Services.Links.GitHub" Value="https://github.com/Microsoft/vscode-loc" />
+        
+      
+      
+      
+      
+      
+      <Property Id="Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown" Value="true" />
+      
+      
+    </Properties>
+    
+    <Icon>extension/languagepack.png</Icon>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Content.Changelog" Path="extension/CHANGELOG.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/languagepack.png" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Code.Translation.HU" Path="extension/translations/main.i18n.json" Addressable="true" />
+  </Assets>
+</PackageManifest>

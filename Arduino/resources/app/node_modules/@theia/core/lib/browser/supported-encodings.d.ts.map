@@ -1,0 +1,1 @@
+{"version":3,"file":"supported-encodings.d.ts","sourceRoot":"","sources":["../../src/browser/supported-encodings.ts"],"names":[],"mappings":"AAsBA,eAAO,MAAM,mBAAmB,EAAE;IAAE,CAAC,QAAQ,EAAE,MAAM,GAAG;QAAE,SAAS,EAAE,MAAM,CAAC;QAAC,UAAU,EAAE,MAAM,CAAC;QAAC,KAAK,EAAE,MAAM,CAAC;QAAC,UAAU,CAAC,EAAE,OAAO,CAAC;QAAC,KAAK,CAAC,EAAE,MAAM,CAAA;KAAE,CAAA;CA+OrJ,CAAC"}

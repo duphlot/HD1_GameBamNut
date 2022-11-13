@@ -1,0 +1,92 @@
+{
+  "name": "cpp",
+  "displayName": "C/C++ Language Basics (built-in)",
+  "description": "Provides snippets, syntax highlighting, bracket matching and folding in C/C++ files.",
+  "version": "1.52.1",
+  "publisher": "vscode",
+  "license": "SEE LICENSE IN LICENSE-vscode.txt",
+  "engines": {
+    "vscode": "*"
+  },
+  "scripts": {},
+  "contributes": {
+    "languages": [
+      {
+        "id": "c",
+        "extensions": [
+          ".c",
+          ".i"
+        ],
+        "aliases": [
+          "C",
+          "c"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "cpp",
+        "extensions": [
+          ".cpp",
+          ".cc",
+          ".cxx",
+          ".c++",
+          ".hpp",
+          ".hh",
+          ".hxx",
+          ".h++",
+          ".h",
+          ".ii",
+          ".ino",
+          ".inl",
+          ".ipp",
+          ".hpp.in",
+          ".h.in"
+        ],
+        "aliases": [
+          "C++",
+          "Cpp",
+          "cpp"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "c",
+        "scopeName": "source.c",
+        "path": "./syntaxes/c.tmLanguage.json"
+      },
+      {
+        "language": "cpp",
+        "scopeName": "source.cpp.embedded.macro",
+        "path": "./syntaxes/cpp.embedded.macro.tmLanguage.json"
+      },
+      {
+        "language": "cpp",
+        "scopeName": "source.cpp",
+        "path": "./syntaxes/cpp.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.c.platform",
+        "path": "./syntaxes/platform.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "c",
+        "path": "./snippets/c.code-snippets"
+      },
+      {
+        "language": "cpp",
+        "path": "./snippets/cpp.code-snippets"
+      }
+    ]
+  },
+  "keywords": [
+    "Built-in"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theia-ide/vscode-builtin-extensions"
+  }
+}

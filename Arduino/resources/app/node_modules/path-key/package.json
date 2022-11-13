@@ -1,0 +1,22 @@
+{
+  "name": "path-key",
+  "version": "1.0.0",
+  "description": "Get the PATH environment variable key cross-platform",
+  "license": "MIT",
+  "repository": "sindresorhus/path-key",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  }
+}

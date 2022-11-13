@@ -1,0 +1,6 @@
+provider: s3
+bucket: arduino-downloads-prod-beagle
+path: arduino-ide/nightly
+updaterCacheDirName: arduino-ide-updater
+publisherName:
+  - Arduino SA

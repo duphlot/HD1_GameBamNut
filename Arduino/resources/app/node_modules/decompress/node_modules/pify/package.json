@@ -1,0 +1,24 @@
+{
+  "name": "pify",
+  "version": "2.3.0",
+  "description": "Promisify a callback-style function",
+  "license": "MIT",
+  "repository": "sindresorhus/pify",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "ava": "*",
+    "pinkie-promise": "^1.0.0",
+    "v8-natives": "0.0.2",
+    "xo": "*"
+  }
+}

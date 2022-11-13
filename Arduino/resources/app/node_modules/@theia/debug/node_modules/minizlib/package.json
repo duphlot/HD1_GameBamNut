@@ -1,0 +1,22 @@
+{
+  "name": "minizlib",
+  "version": "1.3.3",
+  "description": "A small fast zlib stream built on [minipass](http://npm.im/minipass) and Node.js's zlib binding.",
+  "main": "index.js",
+  "dependencies": {
+    "minipass": "^2.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaacs/minizlib.git"
+  },
+  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+  "license": "MIT",
+  "devDependencies": {
+    "tap": "^12.0.1"
+  },
+  "files": [
+    "index.js",
+    "constants.js"
+  ]
+}

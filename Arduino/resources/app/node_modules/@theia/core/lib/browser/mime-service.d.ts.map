@@ -1,0 +1,1 @@
+{"version":3,"file":"mime-service.d.ts","sourceRoot":"","sources":["../../src/browser/mime-service.ts"],"names":[],"mappings":"AAkBA,MAAM,WAAW,eAAe;IAC5B,QAAQ,CAAC,EAAE,EAAE,MAAM,CAAC;IACpB,QAAQ,CAAC,WAAW,EAAE,MAAM,CAAC;CAChC;AAED,qBACa,WAAW;IAEpB,eAAe,CAAC,YAAY,EAAE,eAAe,EAAE,GAAG,IAAI;CAGzD"}

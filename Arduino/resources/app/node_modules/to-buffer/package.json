@@ -1,0 +1,18 @@
+{
+  "name": "to-buffer",
+  "version": "1.1.1",
+  "description": "Pass in a string, get a buffer back. Pass in a buffer, get the same buffer back",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "^6.0.5",
+    "tape": "^4.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/to-buffer.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "homepage": "https://github.com/mafintosh/to-buffer"
+}
