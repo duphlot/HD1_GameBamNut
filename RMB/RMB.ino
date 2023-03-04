@@ -1,18 +1,10 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
+
 const int maxn = 1e6+7;
 LiquidCrystal_I2C lcd(0x27, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);
-int VRx = A0;
-int VRy = A1;
-int SW = 2;
-int xPosition = 0;
-int yPosition = 0;
-int SW_state = 0;
-int mapX = 0;
-int mapY = 0;
-int count, now = 2; 
-int local[] = {1,7,12};
-int temp = 0;
+int VRx = A0,VRy = A1,SW = 2,xPosition = 0,yPosition = 0,SW_state = 0,mapX = 0,mapY = 0,count, now = 2; 
+int local[] = {1,7,12},temp = 0;
 struct pair{
   int fi;
   int se;
@@ -32,11 +24,11 @@ void setup() {
 
 void count_time(int time){
   int s = 0;
-  for (int s=1;s<time;s++){
+  for (int s=1;s<=time;s++){
     lcd.setCursor(0,1);
     lcd.print("       ");
     lcd.print(s);
-    delay(900);
+    delay(800);
   }
 }
 
@@ -57,8 +49,7 @@ int choose_time(){
       count--;
       lcd.setCursor(0,1);
       lcd.print(count);
-    }
-    delay(50);
+    } delay(50);
     if (SW_state==0) {
       return count;
     }
@@ -113,14 +104,14 @@ void choose_mode(){
         else if (SW_state==0) {
           lcd.clear();
           for (int i=0;i<temp;i++){
-            Serial.println(sav[i].se);
+            lcd.setCursor(0,0);
+            lcd.print("                  ");
             lcd.setCursor(0,0);
             if (sav[i].fi == 0) lcd.print("high");
             else if (sav[i].fi == 1) lcd.print("medium");
             else lcd.print("low");
             count_time(sav[i].se);
-          }
-          exit(0);
+          }exit(0);
         }
       } delay(10000);
     }
