@@ -8,34 +8,34 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "c:/Users/ptd/OneDrive/Tài liệu/GitHub/ARDUINO/HD1-GameBamNut/include",
-                "c:/Users/ptd/OneDrive/Tài liệu/GitHub/ARDUINO/HD1-GameBamNut/src",
-                "C:/Users/ptd/.platformio/packages/framework-arduino-avr/cores/arduino",
-                "C:/Users/ptd/.platformio/packages/framework-arduino-avr/variants/standard",
-                "C:/Users/ptd/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
-                "C:/Users/ptd/.platformio/packages/framework-arduino-avr/libraries/HID/src",
-                "C:/Users/ptd/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
-                "C:/Users/ptd/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
-                "C:/Users/ptd/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                "C:/Users/dungn/OneDrive/Documents/GitHub/ARDUINO/HD1-GameBamNut/include",
+                "C:/Users/dungn/OneDrive/Documents/GitHub/ARDUINO/HD1-GameBamNut/src",
+                "C:/Users/dungn/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "C:/Users/dungn/.platformio/packages/framework-arduino-avr/variants/standard",
+                "C:/Users/dungn/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "C:/Users/dungn/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "C:/Users/dungn/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "C:/Users/dungn/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                "C:/Users/dungn/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
                 ""
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "c:/Users/ptd/OneDrive/Tài liệu/GitHub/ARDUINO/HD1-GameBamNut/include",
-                    "c:/Users/ptd/OneDrive/Tài liệu/GitHub/ARDUINO/HD1-GameBamNut/src",
-                    "C:/Users/ptd/.platformio/packages/framework-arduino-avr/cores/arduino",
-                    "C:/Users/ptd/.platformio/packages/framework-arduino-avr/variants/standard",
-                    "C:/Users/ptd/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
-                    "C:/Users/ptd/.platformio/packages/framework-arduino-avr/libraries/HID/src",
-                    "C:/Users/ptd/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
-                    "C:/Users/ptd/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
-                    "C:/Users/ptd/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                    "C:/Users/dungn/OneDrive/Documents/GitHub/ARDUINO/HD1-GameBamNut/include",
+                    "C:/Users/dungn/OneDrive/Documents/GitHub/ARDUINO/HD1-GameBamNut/src",
+                    "C:/Users/dungn/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "C:/Users/dungn/.platformio/packages/framework-arduino-avr/variants/standard",
+                    "C:/Users/dungn/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "C:/Users/dungn/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "C:/Users/dungn/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "C:/Users/dungn/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    "C:/Users/dungn/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
                     ""
                 ]
             },
             "defines": [
-                "PLATFORMIO=60105",
+                "PLATFORMIO=60106",
                 "ARDUINO_AVR_UNO",
                 "F_CPU=16000000L",
                 "ARDUINO_ARCH_AVR",
@@ -45,7 +45,7 @@
             ],
             "cStandard": "c11",
             "cppStandard": "c++11",
-            "compilerPath": "C:/Users/ptd/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
+            "compilerPath": "C:/Users/dungn/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
             "compilerArgs": [
                 "-mmcu=atmega328p",
                 ""
