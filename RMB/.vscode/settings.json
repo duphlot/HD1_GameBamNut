@@ -1,4 +1,0 @@
-{
-    "cmake.configureOnOpen": true,
-    "cmake.sourceDirectory": "${workspaceFolder}/lib/Adafruit_BusIO"
-}
