@@ -1,4 +1,3 @@
-// I would never fall in love again, until I found you
 #include <Arduino.h>
 //ptd
 #define led1 A5
@@ -387,5 +386,4 @@ void quocca(){
 
 void loop() {
   superidol();
-  delay(10000000);
 }
