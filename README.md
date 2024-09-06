@@ -14,9 +14,9 @@ At the 2022 Vươn Lên Camp of Le Hong Phong High School for the Gifted, our cl
 - *<strong>Round 1: One light is turned on at a time</strong><code class="highlighter-rouge">(a total of 7 times).</code>*
     - Step 1: Randomly generate a sequence of 7 unique numbers using a marked array.
     - Step 2: Following the randomized sequence, turn on the lights one by one and check if the correct button is pressed. If incorrect, the player loses; otherwise, continue. (Checking method: Use a for loop to check each button to see if it's currently lit. Since the checking time for one button is less than 0.0000006s and the average button response time is 0.3s, the check will always be accurate.)
-<img align="center">
+
 ![alt text](Img/round1.gif)
-</img>
+
 - *<strong>Round 2: Two lights are turned on at a time </strong><code class="highlighter-rouge">(a total of 3 times).</code>*
     - Step 1: Randomly generate a sequence of 7 unique numbers using a marked array.
     - Step 2: Following the randomized sequence, turn on two lights at a time and check if the correct two buttons are pressed. If incorrect, the player loses; otherwise, continue. (Checking method: Use a for loop to check each button to see if it's one of the two lit lights. If so, continue checking for 0.1s to see if the other lit button is pressed. If not, the game is over.)
@@ -115,3 +115,7 @@ At the 2022 Vươn Lên Camp of Le Hong Phong High School for the Gifted, our cl
 
 ## INSIDE
 ![alt text](Img/inside.gif)
+
+<video width="320" height="240" controls>
+  <source src="Video/Super_idol.mp4" type="video/mp4">
+</video>
